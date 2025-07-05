@@ -7,24 +7,14 @@ It's designed to provide a consistent and high-quality development experience, r
 ## Features
 
 - **TypeScript:** Strong typing for scalable and maintainable code.
-
-- **ESLint (v8 with `.eslintrc.cjs`):** Code linting with traditional configuration, including TypeScript-specific rules and type-aware linting.
-  - **Note on ESLint & TypeScript Versions:** This template currently uses ESLint v8 (`8.57.x`) and TypeScript `5.3.3`. This specific combination provides stable and well-supported TypeScript linting. While ESLint v9 (with its new flat configuration) is available, it currently has known compatibility challenges with TypeScript that can lead to parsing errors. The project prioritizes a stable linting experience. Deprecation warnings for ESLint v8 are expected during `pnpm install` but do not affect functionality.
-
+- **ESLint (v9 with FlatConfig):** Code linting using ESLint’s modern FlatConfig system via `eslint.config.ts`, including TypeScript-specific rules and type-aware linting.
 - **Prettier:** Automated code formatting to ensure consistent style across the project.
-
 - **Vitest:** Fast and modern unit testing framework with built-in coverage reporting.
-
 - **Husky & Lint-Staged:** Git hooks to automatically lint and format code before committing, ensuring code quality.
-
 - **TypeDoc:** Automated API documentation generation from JSDoc comments.
-
 - **Semantic Release:** Automated versioning, changelog generation, and package publishing based on conventional commits.
-
 - **GitHub Actions CI/CD:** Pre-configured workflow for continuous integration, including linting, building, testing, and security auditing.
-
 - **Dev Container:** Ready-to-use VS Code Dev Container setup for a consistent development environment.
-
 - **PNPM:** Efficient and fast package management.
 
 ## Getting Started
@@ -71,9 +61,8 @@ In the project directory, you can run:
 - `pnpm build` — Compiles TypeScript code to JavaScript in the `dist` folder.
 - `pnpm lint` — Runs ESLint to check for code quality and style issues.
 - `pnpm format` — Formats all code using Prettier.
-- `pnpm test` — Runs Vitest in interactive watch mode.
+- `pnpm test` — Runs Vitest with coverage reporting enabled.
 - `pnpm test:watch` — Alias for `pnpm test`.
-- `pnpm coverage` — Runs tests once and generates a code coverage report.
 - `pnpm docs` — Generates API documentation using TypeDoc in the `docs` folder.
 - `pnpm release` — (For CI/CD) Automates package versioning, changelog generation, and publishing via Semantic Release.
 
@@ -89,7 +78,7 @@ In the project directory, you can run:
 ├── src/ # Source code
 │ ├── cli.ts # Main CLI entry point (example)
 │ └── cli.test.ts # Unit tests for cli.ts
-├── .eslintrc.cjs # ESLint configuration (CommonJS format)
+├── eslint.config.ts # ESLint FlatConfig
 ├── .gitignore # Files and directories to ignore in Git
 ├── .prettierrc.json # Prettier configuration
 ├── package.json # Project metadata and scripts
@@ -101,7 +90,7 @@ In the project directory, you can run:
 
 ## Customization
 
-- **ESLint Rules:** Adjust rules in `.eslintrc.cjs`.
+- **ESLint Rules:** Adjust rules and plugin setup in `eslint.config.ts`.
 - **Prettier Options:** Modify `.prettierrc.json`.
 - **Vitest Configuration:** Update `vitest.config.ts` for test environment, coverage thresholds, etc.
 - **CI/CD Workflow:** Customize `.github/workflows/ci.yml` for additional steps or different Node.js versions.

@@ -12,7 +12,7 @@ function getPackageNameFromPackageJson(): string {
     const packageJsonPath = resolve(process.cwd(), 'package.json');
     const packageJson = JSON.parse(readFileSync(packageJsonPath, 'utf8'));
     return packageJson.name || 'unknown-package';
-  } catch (error) {
+  } catch {
     return 'unknown-package';
   }
 }
