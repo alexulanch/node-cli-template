@@ -1,6 +1,6 @@
 {
   "name": "Development",
-  "image": "mcr.microsoft.com/devcontainers/typescript-node:latest",
+  "image": "mcr.microsoft.com/devcontainers/typescript-node:20",
   "features": {
     "ghcr.io/devcontainers/features/node:1": {
       "pnpm": true
