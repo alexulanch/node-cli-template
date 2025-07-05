@@ -1,0 +1,34 @@
+# Source files (not compiled)
+src/
+*.ts
+*.tsx
+
+# Build config and lock files
+tsconfig.json
+pnpm-lock.yaml
+.npmignore
+
+# Environment variables
+.env
+.env.*
+
+# IDE/editor settings
+.vscode/
+.idea/
+
+# System files
+.DS_Store
+Thumbs.db
+*.log
+
+# Git-related files
+.git/
+.gitignore
+
+# Tests
+__tests__/
+*.test.ts
+*.spec.ts
+
+# Local artifacts
+*.tgz
