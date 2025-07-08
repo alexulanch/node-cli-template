@@ -1,6 +1,6 @@
 {
   "name": "your-package-name",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "A modern Node.js CLI project template with TypeScript, ESLint, Prettier, Vitest, Husky and Lint-Staged",
   "author": "Alexander Ulanch",
   "license": "MIT",
