@@ -70,22 +70,23 @@ In the project directory, you can run:
 
 ```
 .
-├── .devcontainer/ # VS Code Dev Container configuration
-├── .github/workflows/ # GitHub Actions CI/CD workflows
-├── .husky/ # Git hooks managed by Husky
-├── dist/ # Compiled JavaScript output (ignored by Git)
-├── docs/ # Generated API documentation (ignored by Git)
-├── src/ # Source code
-│ ├── cli.ts # Main CLI entry point (example)
-│ └── cli.test.ts # Unit tests for cli.ts
-├── eslint.config.ts # ESLint FlatConfig
-├── .gitignore # Files and directories to ignore in Git
-├── .prettierrc.json # Prettier configuration
-├── package.json # Project metadata and scripts
-├── pnpm-lock.yaml # PNPM lockfile
-├── tsconfig.json # TypeScript configuration for source code
-├── tsconfig.eslint.json # TypeScript configuration specifically for ESLint
-└── vitest.config.ts # Vitest testing framework configuration
+├── .devcontainer/
+├── .github/workflows/
+├── .husky/
+├── src/
+│   ├── cli.ts
+│   └── cli.test.ts
+├── .gitignore
+├── .npmrc
+├── .prettierignore
+├── .prettierrc.json
+├── commitlint.config.cjs
+├── eslint.config.ts
+├── package.json
+├── README.md
+├── tsconfig.json
+├── tsconfig.eslint.json
+└── vitest.config.ts
 ```
 
 ## Customization
